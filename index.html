@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CNC Custom Carpentry LLC | Decks, Fences &amp; Outdoor Living</title>
+  <meta name="description" content="Chris Sexton and Jeremy. Custom decks, durable fences, and outdoor living in East Tennessee. Licensed and insured. EST. 2026." />
+  <meta property="og:title" content="CNC Custom Carpentry LLC" />
+  <meta property="og:description" content="Custom decks, fences, and outdoor living. Call Chris." />
+  <meta property="og:image" content="assets/gallery/g15.jpg" />
+  <link rel="icon" href="assets/logo.jpg" />
+  <style>
+    :root { --bg:#0c0a08; --panel:#16120e; --ink:#f3ece3; --muted:#b9a894; --copper:#c48a4a; --line:#3a2f24; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--bg); color: var(--ink); font-family: "Segoe UI", Helvetica, Arial, sans-serif; }
+    a { color: var(--copper); }
+    header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 16px 6vw; border-bottom: 1px solid var(--line);
+      position: sticky; top: 0; background: rgba(12,10,8,.92); backdrop-filter: blur(8px); z-index: 5;
+    }
+    header .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--ink); }
+    header img { height: 44px; width: 44px; object-fit: cover; border-radius: 8px; }
+    header .name { font-size: .78rem; letter-spacing: .14em; }
+    nav a { color: var(--muted); text-decoration: none; margin-left: 20px; font-size: .9rem; letter-spacing: .04em; }
+    .hero {
+      min-height: 86vh; display: grid; align-items: end;
+      background: #000 center/cover no-repeat;
+      background-image: linear-gradient(to top, rgba(12,10,8,.88), rgba(12,10,8,.18)), url("assets/gallery/g15.jpg");
+    }
+    .hero-inner { padding: 72px 6vw 80px; max-width: 38rem; }
+    .eyebrow { color: var(--copper); letter-spacing: .2em; font-size: .78rem; margin: 0 0 12px; }
+    .hero h1 { font-size: clamp(1.8rem, 4.4vw, 3.1rem); letter-spacing: .1em; margin: 0 0 14px; line-height: 1.15; }
+    .hero p { color: var(--muted); margin: 0 0 28px; line-height: 1.6; }
+    .btn {
+      display: inline-block; background: var(--copper); color: #1a120b; text-decoration: none;
+      padding: 13px 24px; font-weight: 700; letter-spacing: .06em; border-radius: 2px;
+    }
+    .btn-ghost { background: transparent; color: var(--ink); border: 1px solid var(--line); margin-left: 10px; }
+    section { padding: 80px 6vw; }
+    h2 { letter-spacing: .18em; font-size: .82rem; color: var(--copper); margin: 0 0 26px; }
+    .grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
+    .card { background: var(--panel); border: 1px solid var(--line); padding: 24px; }
+    .card h3 { margin: 0 0 8px; font-size: 1.15rem; }
+    .card p { margin: 0; color: var(--muted); line-height: 1.55; }
+    .gallery {
+      display: grid; gap: 8px;
+      grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    }
+    .gallery a { display: block; }
+    .gallery img { width: 100%; height: 210px; object-fit: cover; display: block; }
+    .about { max-width: 40rem; color: var(--muted); line-height: 1.65; font-size: 1.05rem; }
+    footer { border-top: 1px solid var(--line); padding: 28px 6vw 48px; color: var(--muted); font-size: .88rem; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+    @media (max-width: 640px) {
+      nav a:not(.call) { display: none; }
+      .btn-ghost { margin: 12px 0 0; display: inline-block; }
+      .gallery img { height: 170px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="brand" href="#top">
+      <img src="assets/logo.jpg" alt="CNC Custom Carpentry LLC" />
+      <span class="name">CNC CUSTOM CARPENTRY</span>
+    </a>
+    <nav>
+      <a href="#work">Work</a>
+      <a href="#services">Services</a>
+      <a class="call" href="tel:+18653660695">Call</a>
+    </nav>
+  </header>
+  <main id="top">
+    <section class="hero">
+      <div class="hero-inner">
+        <p class="eyebrow">EST. 2026 · LICENSED &amp; INSURED</p>
+        <h1>CNC CUSTOM CARPENTRY</h1>
+        <p>Chris and Jeremy. Custom decks, durable fences, and outdoor living built for East Tennessee.</p>
+        <a class="btn" href="tel:+18653660695">Call Chris · (865) 366-0695</a>
+        <a class="btn btn-ghost" href="#work">See the work</a>
+      </div>
+    </section>
+    <section id="services">
+      <h2>WHAT WE BUILD</h2>
+      <div class="grid">
+        <article class="card"><h3>Custom decks</h3><p>Stairs, railings, and lake-view decks built to the house — not a catalog spec.</p></article>
+        <article class="card"><h3>Durable fences</h3><p>Fence work meant to last through East Tennessee weather.</p></article>
+        <article class="card"><h3>Outdoor living</h3><p>Timber pavilions, pool structures, and the carpentry around the rest of the job.</p></article>
+      </div>
+    </section>
+    <section id="work">
+      <h2>RECENT WORK</h2>
+      <div class="gallery">
+        <a href="assets/gallery/g01.jpg"><img src="assets/gallery/g01.jpg" alt="Timber outdoor living structure" /></a>
+        <a href="assets/gallery/g15.jpg"><img src="assets/gallery/g15.jpg" alt="Lake-view deck stairs" /></a>
+        <a href="assets/gallery/g12.jpg"><img src="assets/gallery/g12.jpg" alt="New deck and stairs" /></a>
+        <a href="assets/gallery/g05.jpg"><img src="assets/gallery/g05.jpg" alt="Lakeside structure" /></a>
+        <a href="assets/gallery/g10.jpg"><img src="assets/gallery/g10.jpg" alt="Job photo" /></a>
+        <a href="assets/gallery/g11.jpg"><img src="assets/gallery/g11.jpg" alt="Job photo" /></a>
+        <a href="assets/gallery/g13.jpg"><img src="assets/gallery/g13.jpg" alt="Job photo" /></a>
+        <a href="assets/gallery/g14.jpg"><img src="assets/gallery/g14.jpg" alt="Job photo" /></a>
+        <a href="assets/gallery/g08.jpg"><img src="assets/gallery/g08.jpg" alt="Job photo" /></a>
+        <a href="assets/gallery/g07.jpg"><img src="assets/gallery/g07.jpg" alt="Job photo" /></a>
+        <a href="assets/gallery/g06.jpg"><img src="assets/gallery/g06.jpg" alt="Job photo" /></a>
+        <a href="assets/gallery/g09.jpg"><img src="assets/gallery/g09.jpg" alt="Job photo" /></a>
+        <a href="assets/gallery/g02.jpg"><img src="assets/gallery/g02.jpg" alt="Job photo" /></a>
+        <a href="assets/gallery/g03.jpg"><img src="assets/gallery/g03.jpg" alt="Job photo" /></a>
+        <a href="assets/gallery/g04.jpg"><img src="assets/gallery/g04.jpg" alt="Job photo" /></a>
+      </div>
+    </section>
+    <section id="about">
+      <h2>THE CREW</h2>
+      <p class="about">Chris Sexton and Jeremy. Local crew. Real pictures from real jobs. If you want a deck, a fence, or outdoor living done right, call Chris and we’ll come look at it.</p>
+    </section>
+    <section id="contact">
+      <h2>GET IN TOUCH</h2>
+      <div class="card">
+        <h3>CNC Custom Carpentry LLC</h3>
+        <p style="margin-top:10px">East Tennessee · Licensed &amp; insured</p>
+        <p style="margin-top:14px"><a href="tel:+18653660695">(865) 366-0695</a></p>
+        <p style="margin-top:10px"><a href="https://www.facebook.com/people/CNC-Custom-Carpentry-LLC/61593549447003/">Facebook</a></p>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <span>CNC Custom Carpentry LLC · EST. 2026</span>
+    <a href="tel:+18653660695">(865) 366-0695</a>
+  </footer>
+</body>
+</html>
