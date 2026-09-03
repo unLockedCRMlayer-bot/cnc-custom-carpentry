@@ -3,59 +3,182 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CNC Custom Carpentry LLC | Decks, Fences &amp; Outdoor Living</title>
-  <meta name="description" content="Chris Sexton and Jeremy. Custom decks, durable fences, and outdoor living in East Tennessee. Licensed and insured. EST. 2026." />
-  <meta property="og:title" content="CNC Custom Carpentry LLC" />
+  <title>CNC Custom Carpentry · East Tennessee</title>
+  <meta name="description" content="Chris Sexton and Jeremy. Custom decks, fences, and outdoor living in East Tennessee. Licensed and insured." />
+  <meta property="og:title" content="CNC Custom Carpentry" />
   <meta property="og:description" content="Custom decks, fences, and outdoor living. Call Chris." />
-  <meta property="og:image" content="assets/gallery/g15.jpg" />
+  <meta property="og:image" content="assets/gallery/g01.jpg" />
   <link rel="icon" href="assets/logo.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet" />
   <style>
-    :root { --bg:#0c0a08; --panel:#16120e; --ink:#f3ece3; --muted:#b9a894; --copper:#c48a4a; --line:#3a2f24; }
+    :root {
+      --cream: #f3ece2;
+      --paper: #efe6d8;
+      --ink: #1c1712;
+      --muted: #5c5348;
+      --line: #d9cfc0;
+      --bronze: #9a7040;
+      --bronze-d: #7c582e;
+      --char: #14110e;
+    }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-    body { margin: 0; background: var(--bg); color: var(--ink); font-family: "Segoe UI", Helvetica, Arial, sans-serif; }
-    a { color: var(--copper); }
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--ink);
+      font-family: Outfit, system-ui, sans-serif;
+      line-height: 1.5;
+    }
+    a { color: var(--bronze-d); }
+    img { max-width: 100%; display: block; }
     header {
+      position: sticky; top: 0; z-index: 20;
       display: flex; align-items: center; justify-content: space-between;
-      padding: 16px 6vw; border-bottom: 1px solid var(--line);
-      position: sticky; top: 0; background: rgba(12,10,8,.92); backdrop-filter: blur(8px); z-index: 5;
+      gap: 16px;
+      padding: 12px 6vw;
+      background: rgba(243,236,226,.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
     }
-    header .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--ink); }
-    header img { height: 44px; width: 44px; object-fit: cover; border-radius: 8px; }
-    header .name { font-size: .78rem; letter-spacing: .14em; }
-    nav a { color: var(--muted); text-decoration: none; margin-left: 20px; font-size: .9rem; letter-spacing: .04em; }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; }
+    .brand img { width: 52px; height: 52px; object-fit: contain; }
+    .brand span { font-weight: 600; letter-spacing: .02em; font-size: .95rem; }
+    .brand small { display: block; font-weight: 400; color: var(--muted); font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; }
+    nav { display: flex; align-items: center; gap: 22px; }
+    nav a { text-decoration: none; color: var(--muted); font-size: .92rem; }
+    nav a:hover { color: var(--ink); }
+    .nav-call {
+      background: var(--ink); color: var(--cream) !important;
+      padding: 10px 16px; border-radius: 999px; font-weight: 600; font-size: .88rem;
+    }
     .hero {
-      min-height: 86vh; display: grid; align-items: end;
-      background: #000 center/cover no-repeat;
-      background-image: linear-gradient(to top, rgba(12,10,8,.88), rgba(12,10,8,.18)), url("assets/gallery/g15.jpg");
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      min-height: calc(100vh - 77px);
+      max-width: 1400px;
+      margin: 0 auto;
     }
-    .hero-inner { padding: 72px 6vw 80px; max-width: 38rem; }
-    .eyebrow { color: var(--copper); letter-spacing: .2em; font-size: .78rem; margin: 0 0 12px; }
-    .hero h1 { font-size: clamp(1.8rem, 4.4vw, 3.1rem); letter-spacing: .1em; margin: 0 0 14px; line-height: 1.15; }
-    .hero p { color: var(--muted); margin: 0 0 28px; line-height: 1.6; }
+    .hero-copy {
+      padding: 8vh 6vw 7vh;
+      display: flex; flex-direction: column; justify-content: center;
+    }
+    .eyebrow {
+      color: var(--bronze-d);
+      font-size: .78rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      margin: 0 0 18px;
+      font-weight: 600;
+    }
+    h1 {
+      font-family: Fraunces, Georgia, serif;
+      font-size: clamp(2.2rem, 4.6vw, 4.1rem);
+      font-weight: 500;
+      line-height: 1.08;
+      letter-spacing: -.02em;
+      margin: 0 0 18px;
+    }
+    .lede { font-size: 1.12rem; color: var(--muted); max-width: 32rem; margin: 0 0 32px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; }
     .btn {
-      display: inline-block; background: var(--copper); color: #1a120b; text-decoration: none;
-      padding: 13px 24px; font-weight: 700; letter-spacing: .06em; border-radius: 2px;
+      display: inline-flex; align-items: center; justify-content: center;
+      background: var(--ink); color: var(--cream); text-decoration: none;
+      padding: 14px 22px; border-radius: 999px; font-weight: 600;
     }
-    .btn-ghost { background: transparent; color: var(--ink); border: 1px solid var(--line); margin-left: 10px; }
-    section { padding: 80px 6vw; }
-    h2 { letter-spacing: .18em; font-size: .82rem; color: var(--copper); margin: 0 0 26px; }
-    .grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
-    .card { background: var(--panel); border: 1px solid var(--line); padding: 24px; }
-    .card h3 { margin: 0 0 8px; font-size: 1.15rem; }
-    .card p { margin: 0; color: var(--muted); line-height: 1.55; }
+    .btn:hover { background: #2a231c; }
+    .btn-ghost {
+      background: transparent; color: var(--ink);
+      border: 1px solid var(--line);
+    }
+    .hero-photo { position: relative; overflow: hidden; background: var(--char); min-height: 420px; }
+    .hero-photo img { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; }
+    section { padding: 88px 6vw; }
+    .wrap { max-width: 1180px; margin: 0 auto; }
+    .kicker {
+      font-size: .78rem; letter-spacing: .16em; text-transform: uppercase;
+      color: var(--bronze-d); font-weight: 600; margin: 0 0 10px;
+    }
+    h2 {
+      font-family: Fraunces, Georgia, serif;
+      font-size: clamp(1.7rem, 3vw, 2.4rem);
+      font-weight: 500; margin: 0 0 36px; letter-spacing: -.02em;
+    }
+    .services {
+      display: grid; gap: 18px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .svc {
+      background: #fff;
+      border: 1px solid var(--line);
+      overflow: hidden;
+    }
+    .svc img { width: 100%; height: 190px; object-fit: cover; }
+    .svc div { padding: 20px 22px 24px; }
+    .svc h3 { margin: 0 0 8px; font-size: 1.15rem; font-family: Fraunces, Georgia, serif; font-weight: 550; }
+    .svc p { margin: 0; color: var(--muted); }
     .gallery {
-      display: grid; gap: 8px;
-      grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: 160px;
     }
-    .gallery a { display: block; }
-    .gallery img { width: 100%; height: 210px; object-fit: cover; display: block; }
-    .about { max-width: 40rem; color: var(--muted); line-height: 1.65; font-size: 1.05rem; }
-    footer { border-top: 1px solid var(--line); padding: 28px 6vw 48px; color: var(--muted); font-size: .88rem; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
-    @media (max-width: 640px) {
-      nav a:not(.call) { display: none; }
-      .btn-ghost { margin: 12px 0 0; display: inline-block; }
-      .gallery img { height: 170px; }
+    .gallery a { display: block; overflow: hidden; background: var(--char); }
+    .gallery img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+    .gallery a:hover img { transform: scale(1.04); }
+    .g-wide { grid-column: span 2; grid-row: span 2; }
+    .g-tall { grid-row: span 2; }
+    .about {
+      display: grid; grid-template-columns: .9fr 1.1fr; gap: 48px; align-items: center;
+    }
+    .about p { color: var(--muted); font-size: 1.08rem; margin: 0 0 16px; }
+    .about img { width: 100%; height: 420px; object-fit: cover; }
+    .contact {
+      background: var(--char); color: var(--cream);
+      padding: 88px 6vw;
+    }
+    .contact h2 { color: var(--cream); }
+    .contact .kicker { color: #d4b07a; }
+    .phone {
+      font-family: Fraunces, Georgia, serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      color: var(--cream); text-decoration: none;
+      display: inline-block; margin: 8px 0 18px;
+    }
+    .contact p { color: #c9bfb2; margin: 0 0 8px; }
+    .fb { color: #d4b07a; }
+    footer {
+      display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+      padding: 22px 6vw 36px; color: var(--muted); font-size: .88rem;
+      border-top: 1px solid var(--line); background: var(--cream);
+    }
+    .mobile-bar {
+      display: none;
+      position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 30;
+      background: var(--ink); color: var(--cream); text-decoration: none;
+      text-align: center; padding: 14px; border-radius: 999px; font-weight: 600;
+      box-shadow: 0 10px 30px rgba(0,0,0,.25);
+    }
+    #lb {
+      display: none; position: fixed; inset: 0; z-index: 40;
+      background: rgba(12,10,8,.92); align-items: center; justify-content: center; padding: 24px;
+    }
+    #lb.open { display: flex; }
+    #lb img { max-width: min(1100px, 92vw); max-height: 88vh; object-fit: contain; }
+    #lb button {
+      position: absolute; top: 16px; right: 20px; background: none; border: 0;
+      color: #fff; font-size: 2rem; cursor: pointer;
+    }
+    @media (max-width: 900px) {
+      .hero, .about, .services { grid-template-columns: 1fr; }
+      .hero { min-height: auto; }
+      .hero-photo { min-height: 52vh; }
+      .gallery { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 140px; }
+      nav a:not(.nav-call) { display: none; }
+      .mobile-bar { display: block; }
+      body { padding-bottom: 76px; }
     }
   </style>
 </head>
@@ -63,69 +186,127 @@
   <header>
     <a class="brand" href="#top">
       <img src="assets/logo.jpg" alt="CNC Custom Carpentry LLC" />
-      <span class="name">CNC CUSTOM CARPENTRY</span>
+      <span>CNC Custom Carpentry<small>East Tennessee</small></span>
     </a>
     <nav>
       <a href="#work">Work</a>
       <a href="#services">Services</a>
-      <a class="call" href="tel:+18653660695">Call</a>
+      <a class="nav-call" href="tel:+18653660695">Call Chris</a>
     </nav>
   </header>
+
   <main id="top">
     <section class="hero">
-      <div class="hero-inner">
-        <p class="eyebrow">EST. 2026 · LICENSED &amp; INSURED</p>
-        <h1>CNC CUSTOM CARPENTRY</h1>
-        <p>Chris and Jeremy. Custom decks, durable fences, and outdoor living built for East Tennessee.</p>
-        <a class="btn" href="tel:+18653660695">Call Chris · (865) 366-0695</a>
-        <a class="btn btn-ghost" href="#work">See the work</a>
+      <div class="hero-copy">
+        <p class="eyebrow">Licensed &amp; insured · Est. 2026</p>
+        <h1>Decks, fences, and outdoor living that look like they belong.</h1>
+        <p class="lede">Chris Sexton and Jeremy. Local crew. Real jobs in East Tennessee — built to the house, not a catalog spec.</p>
+        <div class="actions">
+          <a class="btn" href="tel:+18653660695">Call Chris · (865) 366-0695</a>
+          <a class="btn btn-ghost" href="#work">See the work</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="assets/gallery/g01.jpg" alt="Timber outdoor living structure" />
       </div>
     </section>
+
     <section id="services">
-      <h2>WHAT WE BUILD</h2>
-      <div class="grid">
-        <article class="card"><h3>Custom decks</h3><p>Stairs, railings, and lake-view decks built to the house — not a catalog spec.</p></article>
-        <article class="card"><h3>Durable fences</h3><p>Fence work meant to last through East Tennessee weather.</p></article>
-        <article class="card"><h3>Outdoor living</h3><p>Timber pavilions, pool structures, and the carpentry around the rest of the job.</p></article>
+      <div class="wrap">
+        <p class="kicker">What we build</p>
+        <h2>Built for the property.</h2>
+        <div class="services">
+          <article class="svc">
+            <img src="assets/gallery/g15.jpg" alt="Lake-view deck stairs" />
+            <div>
+              <h3>Custom decks</h3>
+              <p>Stairs, railings, and lake-view decks fitted to the house.</p>
+            </div>
+          </article>
+          <article class="svc">
+            <img src="assets/gallery/g10.jpg" alt="New privacy fence" />
+            <div>
+              <h3>Fences</h3>
+              <p>Privacy and boundary fence work meant to last through East Tennessee weather.</p>
+            </div>
+          </article>
+          <article class="svc">
+            <img src="assets/gallery/g05.jpg" alt="Outdoor structure" />
+            <div>
+              <h3>Outdoor living</h3>
+              <p>Pavilions, pool structures, and the carpentry around the rest of the job.</p>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
-    <section id="work">
-      <h2>RECENT WORK</h2>
-      <div class="gallery">
-        <a href="assets/gallery/g01.jpg"><img src="assets/gallery/g01.jpg" alt="Timber outdoor living structure" /></a>
-        <a href="assets/gallery/g15.jpg"><img src="assets/gallery/g15.jpg" alt="Lake-view deck stairs" /></a>
-        <a href="assets/gallery/g12.jpg"><img src="assets/gallery/g12.jpg" alt="New deck and stairs" /></a>
-        <a href="assets/gallery/g05.jpg"><img src="assets/gallery/g05.jpg" alt="Lakeside structure" /></a>
-        <a href="assets/gallery/g10.jpg"><img src="assets/gallery/g10.jpg" alt="Job photo" /></a>
-        <a href="assets/gallery/g11.jpg"><img src="assets/gallery/g11.jpg" alt="Job photo" /></a>
-        <a href="assets/gallery/g13.jpg"><img src="assets/gallery/g13.jpg" alt="Job photo" /></a>
-        <a href="assets/gallery/g14.jpg"><img src="assets/gallery/g14.jpg" alt="Job photo" /></a>
-        <a href="assets/gallery/g08.jpg"><img src="assets/gallery/g08.jpg" alt="Job photo" /></a>
-        <a href="assets/gallery/g07.jpg"><img src="assets/gallery/g07.jpg" alt="Job photo" /></a>
-        <a href="assets/gallery/g06.jpg"><img src="assets/gallery/g06.jpg" alt="Job photo" /></a>
-        <a href="assets/gallery/g09.jpg"><img src="assets/gallery/g09.jpg" alt="Job photo" /></a>
-        <a href="assets/gallery/g02.jpg"><img src="assets/gallery/g02.jpg" alt="Job photo" /></a>
-        <a href="assets/gallery/g03.jpg"><img src="assets/gallery/g03.jpg" alt="Job photo" /></a>
-        <a href="assets/gallery/g04.jpg"><img src="assets/gallery/g04.jpg" alt="Job photo" /></a>
+
+    <section id="work" style="padding-top:0">
+      <div class="wrap">
+        <p class="kicker">Recent work</p>
+        <h2>From the jobs.</h2>
+        <div class="gallery">
+          <a class="g-wide" href="assets/gallery/g01.jpg" data-lb><img src="assets/gallery/g01.jpg" alt="Timber pavilion in progress" /></a>
+          <a class="g-tall" href="assets/gallery/g15.jpg" data-lb><img src="assets/gallery/g15.jpg" alt="Lake-view deck stairs" /></a>
+          <a href="assets/gallery/g12.jpg" data-lb><img src="assets/gallery/g12.jpg" alt="New deck and stairs" /></a>
+          <a href="assets/gallery/g05.jpg" data-lb><img src="assets/gallery/g05.jpg" alt="Lakeside structure" /></a>
+          <a class="g-tall" href="assets/gallery/g13.jpg" data-lb><img src="assets/gallery/g13.jpg" alt="Job photo" /></a>
+          <a href="assets/gallery/g14.jpg" data-lb><img src="assets/gallery/g14.jpg" alt="Job photo" /></a>
+          <a class="g-wide" href="assets/gallery/g10.jpg" data-lb><img src="assets/gallery/g10.jpg" alt="Fence line" /></a>
+          <a href="assets/gallery/g11.jpg" data-lb><img src="assets/gallery/g11.jpg" alt="Job photo" /></a>
+          <a href="assets/gallery/g08.jpg" data-lb><img src="assets/gallery/g08.jpg" alt="Job photo" /></a>
+          <a href="assets/gallery/g07.jpg" data-lb><img src="assets/gallery/g07.jpg" alt="Job photo" /></a>
+          <a href="assets/gallery/g06.jpg" data-lb><img src="assets/gallery/g06.jpg" alt="Job photo" /></a>
+          <a href="assets/gallery/g09.jpg" data-lb><img src="assets/gallery/g09.jpg" alt="Job photo" /></a>
+        </div>
       </div>
     </section>
+
     <section id="about">
-      <h2>THE CREW</h2>
-      <p class="about">Chris Sexton and Jeremy. Local crew. Real pictures from real jobs. If you want a deck, a fence, or outdoor living done right, call Chris and we’ll come look at it.</p>
+      <div class="wrap about">
+        <img src="assets/gallery/g12.jpg" alt="Fresh deck stairs" />
+        <div>
+          <p class="kicker">The crew</p>
+          <h2>Chris and Jeremy.</h2>
+          <p>Two-man crew. Real pictures from real jobs. No stock photos, no fake quotes.</p>
+          <p>If you want a deck, a fence, or outdoor living done right, call Chris. We’ll come look at it.</p>
+          <a class="btn" href="tel:+18653660695">Call (865) 366-0695</a>
+        </div>
+      </div>
     </section>
-    <section id="contact">
-      <h2>GET IN TOUCH</h2>
-      <div class="card">
-        <h3>CNC Custom Carpentry LLC</h3>
-        <p style="margin-top:10px">East Tennessee · Licensed &amp; insured</p>
-        <p style="margin-top:14px"><a href="tel:+18653660695">(865) 366-0695</a></p>
-        <p style="margin-top:10px"><a href="https://www.facebook.com/people/CNC-Custom-Carpentry-LLC/61593549447003/">Facebook</a></p>
+
+    <section class="contact" id="contact">
+      <div class="wrap">
+        <p class="kicker">Get in touch</p>
+        <h2>Ready when you are.</h2>
+        <a class="phone" href="tel:+18653660695">(865) 366-0695</a>
+        <p>CNC Custom Carpentry LLC · East Tennessee · Licensed &amp; insured</p>
+        <p><a class="fb" href="https://www.facebook.com/people/CNC-Custom-Carpentry-LLC/61593549447003/">Facebook</a></p>
       </div>
     </section>
   </main>
+
   <footer>
-    <span>CNC Custom Carpentry LLC · EST. 2026</span>
-    <a href="tel:+18653660695">(865) 366-0695</a>
+    <span>CNC Custom Carpentry LLC · Est. 2026</span>
+    <span>East Tennessee</span>
   </footer>
+  <a class="mobile-bar" href="tel:+18653660695">Call Chris · (865) 366-0695</a>
+  <div id="lb" role="dialog" aria-modal="true"><button type="button" aria-label="Close">&times;</button><img alt="" /></div>
+  <script>
+    const lb = document.getElementById('lb');
+    const img = lb.querySelector('img');
+    document.querySelectorAll('[data-lb]').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        img.src = a.getAttribute('href');
+        img.alt = a.querySelector('img').alt;
+        lb.classList.add('open');
+      });
+    });
+    const close = () => lb.classList.remove('open');
+    lb.addEventListener('click', close);
+    lb.querySelector('button').addEventListener('click', close);
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+  </script>
 </body>
 </html>
