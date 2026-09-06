@@ -1,332 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="utf-8" />
- <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
- <title>CNC Custom Carpentry LLC · East Tennessee</title>
- <meta name="description" content="Chris Sexton and Cameron Beeler. Custom decks, fences, and outdoor living in East Tennessee. Licensed and insured." />
- <meta property="og:title" content="CNC Custom Carpentry LLC" />
- <meta property="og:description" content="Custom decks, fences, and outdoor living. Call us." />
- <meta property="og:image" content="assets/gallery/g01.jpg" />
- <link rel="icon" href="assets/logo.jpg" />
- <link rel="preconnect" href="https://fonts.googleapis.com" />
- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
- <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet" />
- <style>
- :root {
- --paper: #f2ede4;
- --paper-2: #e8e0d2;
- --ink: #1c1712;
- --ink-soft: #3a322a;
- --mute: #6f655a;
- --forest: #3d4a3c;
- --forest-2: #2c372c;
- --forest-fg: #f2ede4;
- --line: #d4c9b8;
- --display: "Cormorant Garamond", Georgia, serif;
- --sans: Figtree, system-ui, sans-serif;
- }
- * { box-sizing: border-box; }
- html { scroll-behavior: smooth; }
- body {
- margin: 0;
- background: var(--paper);
- color: var(--ink);
- font-family: var(--sans);
- font-size: 1.0625rem;
- line-height: 1.6;
- }
- img { max-width: 100%; display: block; }
- a { color: inherit; }
- header {
- position: sticky; top: 0; z-index: 40;
- background: rgba(242,237,228,.92);
- backdrop-filter: blur(10px);
- border-bottom: 1px solid transparent;
- }
- header.scrolled { border-color: var(--line); }
-.bar {
- max-width: 80rem; margin: 0 auto; padding: 0 1.5rem;
- height: 4.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem;
- }
-.brand { display: flex; align-items: center; gap:.85rem; text-decoration: none; min-width: 0; }
-.brand img { width: 44px; height: 44px; object-fit: contain; }
-.brand strong { font-family: var(--display); font-size: 1.15rem; font-weight: 600; display: block; line-height: 1.1; }
-.brand small { display: none; letter-spacing:.18em; text-transform: uppercase; color: var(--mute); font-size:.68rem; font-weight: 600; }
- nav { display: none; gap: 1.75rem; }
- nav a { text-decoration: none; font-size:.9rem; font-weight: 500; color: var(--ink-soft); }
- nav a:hover { color: var(--ink); }
-.call {
- display: inline-flex; align-items: center; justify-content: center; gap:.45rem;
- background: var(--forest); color: var(--forest-fg); text-decoration: none;
- padding:.7rem 1.05rem; font-weight: 600; font-size:.92rem;
- }
-.call:hover { background: var(--forest-2); }
-.call-line { background: transparent; color: var(--ink); border: 1px solid var(--line); }
-.hero {
- max-width: 80rem; margin: 0 auto; padding: 2.5rem 1.5rem 3rem;
- display: grid; gap: 2rem;
- }
-.eyebrow {
- font-size:.7rem; font-weight: 600; letter-spacing:.2em; text-transform: uppercase; color: var(--mute); margin: 0 0 1rem;
- }
- h1 {
- font-family: var(--display); font-weight: 500; letter-spacing: -.03em;
- font-size: clamp(2.6rem, 7vw, 5.4rem); line-height:.94; margin: 0;
- }
- h1 em { font-style: italic; color: var(--forest); font-weight: 500; }
-.lede { max-width: 28rem; color: var(--ink-soft); font-size: 1.12rem; margin: 1.25rem 0 1.75rem; }
-.actions { display: flex; flex-wrap: wrap; gap:.75rem; }
-.hero-photo { background: var(--paper-2); }
-.hero-photo img { width: 100%; height: 100%; object-fit: cover; min-height: 280px; }
-.cap { display: flex; justify-content: space-between; gap: 1rem; color: var(--mute); font-size:.85rem; margin-top:.7rem; }
-.marquee {
- overflow: hidden; border-block: 1px solid var(--line); background: var(--paper-2); padding:.9rem 0;
- }
-.marquee-track { display: flex; width: max-content; animation: shift 42s linear infinite; }
-.marquee-track span { font-family: var(--display); font-size: 1.6rem; padding: 0 1.4rem; color: var(--ink-soft); }
- @keyframes shift { to { transform: translateX(-50%); } }
- section { border-bottom: 1px solid var(--line); }
-.wrap { max-width: 80rem; margin: 0 auto; padding: 4.5rem 1.5rem; }
- h2 { font-family: var(--display); font-weight: 500; letter-spacing: -.02em; font-size: clamp(1.8rem, 3vw, 2.7rem); margin:.6rem 0 0; }
-.crew { display: grid; gap: 1.5rem; }
-.crew p { color: var(--ink-soft); font-size: 1.12rem; }
-.full img { width: 100%; max-height: 640px; object-fit: cover; }
-.full.wrap { padding-top: 1.4rem; padding-bottom: 1.6rem; display: flex; flex-direction: column; gap:.4rem; }
-.svcs { list-style: none; margin: 2rem 0 0; padding: 0; border-top: 1px solid var(--line); }
-.svcs li { display: grid; grid-template-columns: 3rem 1fr; gap: 1rem; padding: 1.35rem 0; border-bottom: 1px solid var(--line); }
-.svcs.n { font-family: var(--display); color: var(--mute); font-size: 1.2rem; }
-.svcs h3 { font-family: var(--display); font-size: 1.7rem; margin: 0; font-weight: 500; }
-.svcs p { margin:.35rem 0 0; color: var(--mute); }
-.gallery {
- display: grid; gap: 10px;
- grid-template-columns: 1fr 1fr;
- grid-auto-rows: 140px;
- }
-.gallery a { display: block; overflow: hidden; background: #1c1712; }
-.gallery img { width: 100%; height: 100%; object-fit: cover; transition: transform.4s ease; }
-.gallery a:hover img { transform: scale(1.04); }
-.g-wide { grid-column: span 2; grid-row: span 2; }
-.g-tall { grid-row: span 2; }
-.process { background: var(--paper-2); }
-.steps { list-style: none; margin: 2rem 0 0; padding: 0; }
-.steps li { display: grid; grid-template-columns: 3rem 1fr; gap: 1rem; padding: 1.4rem 0; border-top: 1px solid var(--line); }
-.steps li:first-child { border-top: 0; padding-top: 0; }
-.n { font-family: var(--display); color: var(--mute); font-size: 1.2rem; }
-.sh { font-family: var(--display); font-size: 1.6rem; margin: 0; font-weight: 500; }
-.sb { margin:.4rem 0 0; color: var(--ink-soft); }
-.contact { background: var(--forest); color: var(--forest-fg); border: 0; }
-.contact.eyebrow { color: rgba(242,237,228,.55); }
-.contact h2 { font-size: clamp(2.4rem, 5vw, 4.2rem); }
-.contact p { color: rgba(242,237,228,.8); }
-.call-inv { background: var(--paper); color: var(--ink); }
- footer {
- display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
- max-width: 80rem; margin: 0 auto; padding: 1.4rem 1.5rem 5.5rem;
- color: var(--mute); font-size:.88rem;
- }
- footer a { color: var(--ink-soft); }
-.sticky {
- display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 50;
- background: var(--forest); color: var(--forest-fg); text-decoration: none;
- height: 3rem; align-items: center; justify-content: center; gap:.5rem; font-weight: 600;
- padding-bottom: env(safe-area-inset-bottom);
- }
- #lb {
- display: none; position: fixed; inset: 0; z-index: 80;
- background: rgba(28,23,18,.92); align-items: center; justify-content: center; padding: 24px;
- }
- #lb.open { display: flex; }
- #lb img { max-width: min(1100px, 92vw); max-height: 88vh; object-fit: contain; }
- #lb button { position: absolute; top: 16px; right: 20px; background: 0; border: 0; color: #fff; font-size: 2rem; cursor: pointer; }
- @media (min-width: 900px) {
-.brand small { display: block; }
- nav { display: flex; }
-.hero { grid-template-columns: 5fr 7fr; align-items: stretch; padding-top: 3rem; }
-.hero-photo img { min-height: 520px; }
-.crew { grid-template-columns: 5fr 6fr; align-items: start; }
-.gallery { grid-template-columns: repeat(4, 1fr); grid-auto-rows: 170px; }
-.sticky { display: none; }
- footer { padding-bottom: 2rem; }
-.full.wrap { flex-direction: row; justify-content: space-between; align-items: end; }
- }
- @media (prefers-reduced-motion: reduce) {
-.marquee-track { animation: none; }
- }
- </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Custom Decks, Fences &amp; Outdoor Living | CNC Custom Carpentry LLC</title>
+  <meta name="description" content="Chris Sexton and Cameron Beeler build custom decks, fences, and outdoor living in East Tennessee. Licensed and insured. Call (865) 369-0695." />
+  <link rel="canonical" href="https://cnccustomcarpentry.com/" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="CNC Custom Carpentry LLC" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content="https://cnccustomcarpentry.com/" />
+  <meta property="og:title" content="Custom Decks, Fences &amp; Outdoor Living | CNC Custom Carpentry LLC" />
+  <meta property="og:description" content="Chris Sexton and Cameron Beeler. Custom decks, fences, and outdoor living in East Tennessee. Call (865) 369-0695." />
+  <meta property="og:image" content="https://cnccustomcarpentry.com/assets/gallery/g01.jpg" />
+  <meta property="og:image:alt" content="Timber outdoor living structure by CNC Custom Carpentry" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="CNC Custom Carpentry LLC · East Tennessee" />
+  <meta name="twitter:description" content="Custom decks, fences, and outdoor living. Call (865) 369-0695." />
+  <meta name="twitter:image" content="https://cnccustomcarpentry.com/assets/gallery/g01.jpg" />
+  <link rel="icon" href="/assets/logo.jpg" type="image/jpeg" />
+  <link rel="apple-touch-icon" href="/assets/logo.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&amp;family=Figtree:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/site.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "CNC Custom Carpentry LLC",
+    "url": "https://cnccustomcarpentry.com/",
+    "telephone": "+1-865-369-0695",
+    "image": "https://cnccustomcarpentry.com/assets/logo.jpg",
+    "description": "Custom decks, fences, and outdoor living built by Chris Sexton and Cameron Beeler in East Tennessee.",
+    "areaServed": {
+      "@type": "AdministrativeArea",
+      "name": "East Tennessee"
+    },
+    "sameAs": [
+      "https://www.facebook.com/people/CNC-Custom-Carpentry-LLC/61593549447003/"
+    ],
+    "founder": [
+      { "@type": "Person", "name": "Chris Sexton" },
+      { "@type": "Person", "name": "Cameron Beeler" }
+    ],
+    "knowsAbout": ["Custom decks", "Fences", "Outdoor living", "Timber pavilions", "Pool structures"]
+  }
+  </script>
 </head>
 <body>
- <header id="hd">
- <div class="bar">
- <a class="brand" href="#top">
- <img src="assets/logo.jpg" alt="CNC Custom Carpentry LLC" />
- <span>
- <strong>CNC Custom Carpentry</strong>
- <small>East Tennessee · Est. 2026</small>
- </span>
- </a>
- <nav>
- <a href="#work">Work</a>
- <a href="#services">Services</a>
- <a href="#about">Crew</a>
- <a href="#contact">Contact</a>
- </nav>
- <a class="call" href="tel:+18653690695">Call us</a>
- </div>
- </header>
+  <a class="skip" href="#main">Skip to content</a>
+  <header id="hd">
+    <div class="bar">
+      <a class="brand" href="/">
+        <img src="/assets/logo.jpg" width="46" height="46" alt="CNC Custom Carpentry LLC logo" />
+        <span>
+          <strong>CNC Custom Carpentry</strong>
+          <small>East Tennessee · Est. 2026</small>
+        </span>
+      </a>
+      <nav aria-label="Primary">
+        <a href="/decks/">Decks</a>
+        <a href="/fences/">Fences</a>
+        <a href="/outdoor-living/">Outdoor living</a>
+        <a href="/#work">Work</a>
+        <a href="/#contact">Contact</a>
+      </nav>
+      <a class="call" href="tel:+18653690695">Call us</a>
+    </div>
+  </header>
 
- <main id="top">
- <section class="hero">
- <div>
- <p class="eyebrow">East Tennessee · Est. 2026 · Licensed and insured</p>
- <h1>Custom decks, <em>fences</em>, and outdoor living.</h1>
- <p class="lede">Timber pavilions and pool structures. Chris Sexton and Cameron Beeler. Local crew. CNC Custom Carpentry LLC.</p>
- <div class="actions">
- <a class="call" href="tel:+18653690695">Call us · (865) 369-0695</a>
- <a class="call call-line" href="#work">See our work</a>
- </div>
- </div>
- <div>
- <div class="hero-photo">
- <a href="assets/gallery/g01.jpg" data-lb><img src="assets/gallery/g01.jpg" alt="Timber outdoor living structure" /></a>
- </div>
- <p class="cap"><span>Outdoor living · East Tennessee</span><span class="eyebrow" style="margin:0">Recent work</span></p>
- </div>
- </section>
+  <main id="main">
+    <section class="hero">
+      <div class="reveal">
+        <p class="eyebrow">East Tennessee · Licensed and insured</p>
+        <h1>Custom decks, <em>fences</em>, and outdoor living.</h1>
+        <p class="lede">Timber pavilions and pool structures. Chris Sexton and Cameron Beeler. Local crew. CNC Custom Carpentry LLC.</p>
+        <div class="actions">
+          <a class="call" href="tel:+18653690695">Call us · (865) 369-0695</a>
+          <a class="call call-line" href="#work">See our work</a>
+        </div>
+      </div>
+      <div class="reveal reveal-delay-1">
+        <div class="hero-photo">
+          <a href="/assets/gallery/g01.jpg" data-lb>
+            <img src="/assets/gallery/g01.jpg" width="1800" height="1350" fetchpriority="high" alt="Custom timber-frame pavilion with dark tongue-and-groove ceiling under construction in East Tennessee" />
+          </a>
+        </div>
+        <p class="cap"><span>Outdoor living · East Tennessee</span><span>Recent work</span></p>
+      </div>
+    </section>
 
- <div class="marquee" aria-hidden="true">
- <div class="marquee-track">
- <span>Custom decks · Fences · Timber pavilions · Pool structures · Outdoor living · East Tennessee · Custom decks · Fences · Timber pavilions · Pool structures · Outdoor living · East Tennessee ·</span>
- <span>Custom decks · Fences · Timber pavilions · Pool structures · Outdoor living · East Tennessee · Custom decks · Fences · Timber pavilions · Pool structures · Outdoor living · East Tennessee ·</span>
- </div>
- </div>
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Custom decks · Fences · Timber pavilions · Pool structures · Outdoor living · East Tennessee · Custom decks · Fences · Timber pavilions · Pool structures · Outdoor living · East Tennessee ·</span>
+        <span>Custom decks · Fences · Timber pavilions · Pool structures · Outdoor living · East Tennessee · Custom decks · Fences · Timber pavilions · Pool structures · Outdoor living · East Tennessee ·</span>
+      </div>
+    </div>
 
- <section class="full">
- <a href="assets/gallery/g15.jpg" data-lb><img src="assets/gallery/g15.jpg" alt="Lake-view deck stairs" /></a>
- <div class="wrap">
- <div>
- <p class="eyebrow">Custom decks · 2026</p>
- <h2>Stairs, railings, lake-view decks.</h2>
- </div>
- </div>
- </section>
+    <section class="full reveal">
+      <a href="/assets/gallery/g15.jpg" data-lb>
+        <img src="/assets/gallery/g15.jpg" width="1242" height="2208" loading="lazy" alt="Multi-level lake-view deck stairs with mesh railings built by CNC Custom Carpentry" />
+      </a>
+      <div class="wrap">
+        <div>
+          <p class="eyebrow">Custom decks</p>
+          <h2>Stairs, railings, lake-view decks.</h2>
+        </div>
+        <a class="call call-line" href="/decks/">Decks we build</a>
+      </div>
+    </section>
 
- <section id="about">
- <div class="wrap crew">
- <div>
- <p class="eyebrow">The crew</p>
- <h2>Chris Sexton and Cameron Beeler.</h2>
- </div>
- <div>
- <p>Local crew. Real pictures from real jobs. Custom decks, fences, and outdoor living — timber pavilions and pool structures. Licensed and insured.</p>
- <p>You call. You get the people who will build it.</p>
- <p style="margin-top:1.4rem"><a class="call" href="tel:+18653690695">Call (865) 369-0695</a></p>
- </div>
- </div>
- </section>
+    <section id="about">
+      <div class="wrap crew">
+        <div class="reveal">
+          <p class="eyebrow">The crew</p>
+          <h2>Chris Sexton and Cameron Beeler.</h2>
+        </div>
+        <div class="reveal reveal-delay-1">
+          <p>Local crew. Real pictures from real jobs. Custom decks, fences, and outdoor living — timber pavilions and pool structures. Licensed and insured.</p>
+          <p>You call. You get the people who will build it.</p>
+          <p style="margin-top:1.4rem"><a class="call" href="tel:+18653690695">Call (865) 369-0695</a></p>
+        </div>
+      </div>
+    </section>
 
- <section id="work">
- <div class="wrap">
- <p class="eyebrow">Recent work</p>
- <h2>Real jobs. Real pictures.</h2>
- <div class="gallery" style="margin-top:2rem">
- <a class="g-wide" href="assets/gallery/g01.jpg" data-lb><img src="assets/gallery/g01.jpg" alt="Timber pavilion" /></a>
- <a class="g-tall" href="assets/gallery/g15.jpg" data-lb><img src="assets/gallery/g15.jpg" alt="Lake-view deck stairs" /></a>
- <a href="assets/gallery/g12.jpg" data-lb><img src="assets/gallery/g12.jpg" alt="New deck and stairs" /></a>
- <a href="assets/gallery/g05.jpg" data-lb><img src="assets/gallery/g05.jpg" alt="Lakeside structure" /></a>
- <a class="g-tall" href="assets/gallery/g13.jpg" data-lb><img src="assets/gallery/g13.jpg" alt="Job photo" /></a>
- <a href="assets/gallery/g14.jpg" data-lb><img src="assets/gallery/g14.jpg" alt="Job photo" /></a>
- <a class="g-wide" href="assets/gallery/g10.jpg" data-lb><img src="assets/gallery/g10.jpg" alt="Fence line" /></a>
- <a href="assets/gallery/g11.jpg" data-lb><img src="assets/gallery/g11.jpg" alt="Job photo" /></a>
- <a href="assets/gallery/g08.jpg" data-lb><img src="assets/gallery/g08.jpg" alt="Job photo" /></a>
- <a href="assets/gallery/g07.jpg" data-lb><img src="assets/gallery/g07.jpg" alt="Job photo" /></a>
- <a href="assets/gallery/g06.jpg" data-lb><img src="assets/gallery/g06.jpg" alt="Job photo" /></a>
- <a href="assets/gallery/g09.jpg" data-lb><img src="assets/gallery/g09.jpg" alt="Job photo" /></a>
- <a href="assets/gallery/g02.jpg" data-lb><img src="assets/gallery/g02.jpg" alt="Job photo" /></a>
- <a href="assets/gallery/g03.jpg" data-lb><img src="assets/gallery/g03.jpg" alt="Job photo" /></a>
- <a href="assets/gallery/g04.jpg" data-lb><img src="assets/gallery/g04.jpg" alt="Job photo" /></a>
- </div>
- </div>
- </section>
+    <section id="services">
+      <div class="wrap">
+        <div class="reveal">
+          <p class="eyebrow">What we build</p>
+          <h2>Decks. Fences. Outdoor living.</h2>
+        </div>
+        <div class="svc-grid">
+          <a class="svc-card reveal" href="/decks/">
+            <span class="n">01</span>
+            <div>
+              <h3>Custom decks</h3>
+              <p>Stairs, railings, and lake-view decks built to the house — not a catalog spec.</p>
+              <span class="go">Decks page</span>
+            </div>
+          </a>
+          <a class="svc-card reveal reveal-delay-1" href="/fences/">
+            <span class="n">02</span>
+            <div>
+              <h3>Fences</h3>
+              <p>Privacy and boundary fence work meant to last through East Tennessee weather.</p>
+              <span class="go">Fences page</span>
+            </div>
+          </a>
+          <a class="svc-card reveal reveal-delay-2" href="/outdoor-living/">
+            <span class="n">03</span>
+            <div>
+              <h3>Outdoor living</h3>
+              <p>Timber pavilions, pool structures, and the carpentry around the rest of the job.</p>
+              <span class="go">Outdoor living</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
 
- <section id="services">
- <div class="wrap">
- <p class="eyebrow">What we build</p>
- <h2>Decks. Fences. Outdoor living.</h2>
- <ul class="svcs">
- <li>
- <span class="n">01</span>
- <div>
- <h3>Custom decks</h3>
- <p>Stairs, railings, and lake-view decks built to the house — not a catalog spec.</p>
- </div>
- </li>
- <li>
- <span class="n">02</span>
- <div>
- <h3>Fences</h3>
- <p>Privacy and boundary fence work meant to last through East Tennessee weather.</p>
- </div>
- </li>
- <li>
- <span class="n">03</span>
- <div>
- <h3>Outdoor living</h3>
- <p>Timber pavilions, pool structures, and the carpentry around the rest of the job.</p>
- </div>
- </li>
- </ul>
- </div>
- </section>
+    <section id="work">
+      <div class="wrap">
+        <div class="reveal">
+          <p class="eyebrow">Recent work</p>
+          <h2>Real jobs. Real pictures.</h2>
+        </div>
+        <div class="gallery reveal">
+          <a class="g-wide" href="/assets/gallery/g01.jpg" data-lb><img src="/assets/gallery/g01.jpg" width="1800" height="1350" loading="lazy" alt="Timber pavilion framing with vaulted ceiling in East Tennessee woods" /></a>
+          <a class="g-tall" href="/assets/gallery/g15.jpg" data-lb><img src="/assets/gallery/g15.jpg" width="1242" height="2208" loading="lazy" alt="Lake-view deck stairs with post-cap lights" /></a>
+          <a href="/assets/gallery/g12.jpg" data-lb><img src="/assets/gallery/g12.jpg" width="1242" height="2208" loading="lazy" alt="New wooden deck stairs with horizontal rail slats" /></a>
+          <a href="/assets/gallery/g05.jpg" data-lb><img src="/assets/gallery/g05.jpg" width="1242" height="2208" loading="lazy" alt="Poolside outdoor living structure under construction overlooking a lake" /></a>
+          <a class="g-tall" href="/assets/gallery/g13.jpg" data-lb><img src="/assets/gallery/g13.jpg" width="1242" height="2208" loading="lazy" alt="Deck skirting with matching privacy fence line" /></a>
+          <a href="/assets/gallery/g14.jpg" data-lb><img src="/assets/gallery/g14.jpg" width="1242" height="2208" loading="lazy" alt="Custom carpentry job photo from CNC Custom Carpentry" /></a>
+          <a class="g-wide" href="/assets/gallery/g10.jpg" data-lb><img src="/assets/gallery/g10.jpg" width="1800" height="2400" loading="lazy" alt="Newly installed wooden privacy fence with dog-ear pickets" /></a>
+          <a href="/assets/gallery/g11.jpg" data-lb><img src="/assets/gallery/g11.jpg" width="1800" height="2400" loading="lazy" alt="Fence and outdoor carpentry detail from a recent job" /></a>
+          <a href="/assets/gallery/g08.jpg" data-lb><img src="/assets/gallery/g08.jpg" width="1242" height="2208" loading="lazy" alt="On-site carpentry work by CNC Custom Carpentry" /></a>
+          <a href="/assets/gallery/g07.jpg" data-lb><img src="/assets/gallery/g07.jpg" width="1242" height="2208" loading="lazy" alt="Custom outdoor build in progress in East Tennessee" /></a>
+          <a href="/assets/gallery/g06.jpg" data-lb><img src="/assets/gallery/g06.jpg" width="1242" height="2208" loading="lazy" alt="Job-site photo of deck or outdoor living carpentry" /></a>
+          <a href="/assets/gallery/g09.jpg" data-lb><img src="/assets/gallery/g09.jpg" width="1242" height="2208" loading="lazy" alt="Finished outdoor carpentry detail" /></a>
+          <a href="/assets/gallery/g02.jpg" data-lb><img src="/assets/gallery/g02.jpg" width="1242" height="2208" loading="lazy" alt="CNC Custom Carpentry project photo" /></a>
+          <a href="/assets/gallery/g03.jpg" data-lb><img src="/assets/gallery/g03.jpg" width="1242" height="2208" loading="lazy" alt="Residential outdoor structure work" /></a>
+          <a href="/assets/gallery/g04.jpg" data-lb><img src="/assets/gallery/g04.jpg" width="1242" height="2208" loading="lazy" alt="Custom fence or deck construction detail" /></a>
+        </div>
+      </div>
+    </section>
 
- <section class="process">
- <div class="wrap">
- <p class="eyebrow">How a job runs</p>
- <h2>Call. Look. Build.</h2>
- <ol class="steps">
- <li><span class="n">01</span><div><h3 class="sh">Call us</h3><p class="sb">Call (865) 369-0695. Deck, fence, pavilion, or pool structure. A few photos by text help.</p></div></li>
- <li><span class="n">02</span><div><h3 class="sh">We look at the job</h3><p class="sb">Chris or Cameron comes to the property, measures, and gives you a price.</p></div></li>
- <li><span class="n">03</span><div><h3 class="sh">We build it</h3><p class="sb">We do the work ourselves. You hear from us, not a dispatcher.</p></div></li>
- </ol>
- </div>
- </section>
+    <section class="process">
+      <div class="wrap">
+        <div class="reveal">
+          <p class="eyebrow">How a job runs</p>
+          <h2>Call. Look. Build.</h2>
+        </div>
+        <ol class="steps">
+          <li class="reveal"><span class="n">01</span><div><h3 class="sh">Call us</h3><p class="sb">Call (865) 369-0695. Deck, fence, pavilion, or pool structure. A few photos by text help.</p></div></li>
+          <li class="reveal reveal-delay-1"><span class="n">02</span><div><h3 class="sh">We look at the job</h3><p class="sb">Chris or Cameron comes to the property, measures, and gives you a price.</p></div></li>
+          <li class="reveal reveal-delay-2"><span class="n">03</span><div><h3 class="sh">We build it</h3><p class="sb">We do the work ourselves. You hear from us, not a dispatcher.</p></div></li>
+        </ol>
+      </div>
+    </section>
 
- <section class="contact" id="contact">
- <div class="wrap" style="display:flex;flex-wrap:wrap;gap:2rem;align-items:end;justify-content:space-between">
- <div>
- <p class="eyebrow">East Tennessee</p>
- <h2>Call us.</h2>
- <p>(865) 369-0695. Local crew. Licensed and insured.</p>
- <p style="margin-top:.8rem"><a href="https://www.facebook.com/people/CNC-Custom-Carpentry-LLC/61593549447003/" style="color:var(--forest-fg)">Facebook</a></p>
- </div>
- <a class="call call-inv" href="tel:+18653690695">Call us · (865) 369-0695</a>
- </div>
- </section>
- </main>
+    <section class="contact" id="contact">
+      <div class="wrap contact-inner">
+        <div class="reveal">
+          <p class="eyebrow">East Tennessee</p>
+          <h2>Call us.</h2>
+          <p>CNC Custom Carpentry LLC · (865) 369-0695. Local crew. Licensed and insured.</p>
+          <p style="margin-top:.8rem"><a class="fb" href="https://www.facebook.com/people/CNC-Custom-Carpentry-LLC/61593549447003/" rel="noopener noreferrer">Facebook</a></p>
+        </div>
+        <a class="call call-inv reveal reveal-delay-1" href="tel:+18653690695">Call us · (865) 369-0695</a>
+      </div>
+    </section>
+  </main>
 
- <footer>
- <span>CNC Custom Carpentry LLC · Est. 2026</span>
- <a href="tel:+18653690695">(865) 369-0695</a>
- </footer>
- <a class="sticky" href="tel:+18653690695">Call us · (865) 369-0695</a>
- <div id="lb" role="dialog" aria-modal="true"><button type="button" aria-label="Close">&times;</button><img alt="" /></div>
- <script>
- const hd = document.getElementById('hd');
- addEventListener('scroll', () => hd.classList.toggle('scrolled', scrollY > 8), { passive: true });
- const lb = document.getElementById('lb');
- const img = lb.querySelector('img');
- document.querySelectorAll('[data-lb]').forEach(a => {
- a.addEventListener('click', e => {
- e.preventDefault();
- img.src = a.getAttribute('href');
- img.alt = (a.querySelector('img') || {}).alt || '';
- lb.classList.add('open');
- });
- });
- const close = () => lb.classList.remove('open');
- lb.addEventListener('click', close);
- lb.querySelector('button').addEventListener('click', close);
- document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
- </script>
+  <footer>
+    <div>
+      <div>CNC Custom Carpentry LLC · East Tennessee</div>
+      <div style="margin-top:.35rem"><a href="tel:+18653690695">(865) 369-0695</a></div>
+    </div>
+    <nav class="foot-nav" aria-label="Footer">
+      <a href="/decks/">Decks</a>
+      <a href="/fences/">Fences</a>
+      <a href="/outdoor-living/">Outdoor living</a>
+      <a href="https://www.facebook.com/people/CNC-Custom-Carpentry-LLC/61593549447003/" rel="noopener noreferrer">Facebook</a>
+    </nav>
+  </footer>
+  <a class="sticky" href="tel:+18653690695">Call us · (865) 369-0695</a>
+  <div id="lb" role="dialog" aria-modal="true" aria-label="Image preview"><button type="button" aria-label="Close">&times;</button><img alt="" /></div>
+  <script src="/js/site.js" defer></script>
 </body>
 </html>
